@@ -1,0 +1,32 @@
+{
+  "iphone":[
+{
+"id": "1",
+"namapembayaran": "PLN Bill",
+"tanggal": "5 July 2021",
+"metodepembayaran": "BD Pay",
+"status": "Success"
+},
+{
+"id": "2",
+"namapembayaran": "Credit Card Bill",
+"tanggal": "6 July 2021",
+"metodepembayaran": "BD Pay",
+"status": "Success"
+},
+{
+"id": "3",
+"namapembayaran": "Kartu Hallo Bill",
+"tanggal": "7 July 2021",
+"metodepembayaran": "BD Pay",
+"status": "Failed"
+},
+{
+"id": "4",
+"namapembayaran": "Kartu Hallo Bill",
+"tanggal": "7 July 2021",
+"metodepembayaran": "BD Pay",
+"status": "Success"
+}
+]
+}

@@ -14,6 +14,13 @@ public class History {
     private String metodepembayaran;
     private String status;
 
+    public History(String namapembayaran, String tanggal, String metodepembayaran, String status) {
+        this.namapembayaran = namapembayaran;
+        this.tanggal = tanggal;
+        this.metodepembayaran = metodepembayaran;
+        this.status = status;
+    }
+
     public int getId() {
         return id;
     }
