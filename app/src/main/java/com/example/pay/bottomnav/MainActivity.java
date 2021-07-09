@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.pay.R;
+import com.example.pay.fragment.HistoryFragment;
+import com.example.pay.fragment.HomeFragment;
+import com.example.pay.fragment.PaymentFragment;
+import com.example.pay.fragment.SettingsFragment;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class MainActivity extends AppCompatActivity {
