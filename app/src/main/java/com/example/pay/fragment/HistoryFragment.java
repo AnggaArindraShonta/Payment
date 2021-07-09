@@ -2,10 +2,10 @@ package com.example.pay.fragment;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,18 +29,19 @@ public class HistoryFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
 
         RecyclerView recyclerView = view.findViewById(R.id.rvListHistory);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setHasFixedSize(true);
 
         HistoryAdapter adapter = new HistoryAdapter();
         recyclerView.setAdapter(adapter);
 
-        historyViewModel = ViewModelProviders.of(this).get(HistoryViewModel.class);
-        historyViewModel.getAllHistory().observe(this, new Observer<List<History>>() {
+        historyViewModel = new ViewModelProvider(this).get(HistoryViewModel.class);
+        historyViewModel.getAllHistory().observe(getViewLifecycleOwner(), new Observer<List<History>>() {
             @Override
             public void onChanged(List<History> histories) {
                 adapter.setHistoryList(histories);
             }
         });
+        return view;
     }
 }
