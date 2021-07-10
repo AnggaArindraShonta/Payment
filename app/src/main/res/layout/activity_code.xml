@@ -14,7 +14,7 @@
       android:layout_height="wrap_content"
       android:layout_margin="20sp"
       android:hint="Input your code here..."
-      android:inputType="textPassword" />
+      android:inputType="text" />
 
   <Button
       android:id="@+id/pay"
