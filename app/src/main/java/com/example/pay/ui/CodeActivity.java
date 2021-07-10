@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.pay.R;
+import com.example.pay.bottomnav.MainActivity;
 import com.example.pay.fragment.HomeFragment;
 
 public class CodeActivity extends AppCompatActivity {
@@ -25,7 +26,7 @@ public class CodeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(CodeActivity.this, "Payment Success", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(CodeActivity.this, HomeFragment.class));
+                startActivity(new Intent(CodeActivity.this, MainActivity.class));
             }
         });
 
