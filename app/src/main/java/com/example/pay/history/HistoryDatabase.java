@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-@Database(entities = (History.class), version = 1)
+@Database(entities = History.class, version = 1)
 public abstract class HistoryDatabase extends RoomDatabase {
 
     public static HistoryDatabase instance;

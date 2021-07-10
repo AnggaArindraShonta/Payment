@@ -28,11 +28,11 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
 
     @Override
     public void onBindViewHolder(@NonNull HistoryAdapter.HistoryHolder historyHolder, int position) {
-        History pengenDoa = historyList.get(position);
-        historyHolder.title.setText(pengenDoa.getNamapembayaran());
-        historyHolder.arabic.setText(pengenDoa.getTanggal());
-        historyHolder.latin.setText(pengenDoa.getMetodepembayaran());
-        historyHolder.translation.setText(pengenDoa.getStatus());
+        History history = historyList.get(position);
+        historyHolder.namapembayaran.setText(history.getNamapembayaran());
+        historyHolder.tanggal.setText(history.getTanggal());
+        historyHolder.metodepembayaran.setText(history.getMetodepembayaran());
+        historyHolder.status.setText(history.getStatus());
     }
 
     @Override
@@ -51,17 +51,17 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
     }
 
     class HistoryHolder extends RecyclerView.ViewHolder {
-        private TextView title;
-        private TextView arabic;
-        private TextView latin;
-        private TextView translation;
+        private TextView namapembayaran;
+        private TextView tanggal;
+        private TextView metodepembayaran;
+        private TextView status;
 
         public HistoryHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.tvNamaPembayaran);
-            arabic = itemView.findViewById(R.id.tvTanggal);
-            latin = itemView.findViewById(R.id.tvMetodePembayaran);
-            translation = itemView.findViewById(R.id.tvStatus);
+            namapembayaran = itemView.findViewById(R.id.tvNamaPembayaran);
+            tanggal = itemView.findViewById(R.id.tvTanggal);
+            metodepembayaran = itemView.findViewById(R.id.tvMetodePembayaran);
+            status = itemView.findViewById(R.id.tvStatus);
         }
     }
 }
